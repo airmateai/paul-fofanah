@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Paul Fofanah · Entrenador personal en Tenerife</title>
+<meta name="description" content="Fuerza y salud para personas con vidas ocupadas. Entrenamiento personal en Tenerife, presencial, online y en grupo en Las Teresitas.">
+<meta property="og:title" content="Paul Fofanah · Entrenador personal en Tenerife">
+<meta property="og:description" content="Fuerza y salud para vidas ocupadas. Entrena sin obsesionarte ni vivir para el gym.">
+<meta property="og:image" content="media/paul.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0c0a;--bg2:#141612;--card:#1a1d17;--line:#2a2e25;--txt:#f3f1ea;--mut:#a3a598;--oliva:#7d8458;--caqui:#b8a46a;--y:#f5c518;}
+*{box-sizing:border-box;margin:0;padding:0}
+html.lenis{height:auto}.lenis.lenis-smooth{scroll-behavior:auto}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.55;overflow-x:clip}
+a{color:inherit}
+img,video{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.display{font-family:Anton,Impact,sans-serif;text-transform:uppercase;line-height:.92;letter-spacing:.005em}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--y)}
+.y{color:var(--y)}
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:17px 28px;border-radius:999px;font-weight:800;font-size:15px;text-decoration:none;overflow:hidden;will-change:transform}
+.btn span{position:relative;z-index:1}
+.btn-y{background:var(--y);color:#111}
+.btn-y::before{content:"";position:absolute;inset:0;background:#fff;transform:translateY(101%);transition:transform .45s cubic-bezier(.7,0,.2,1);border-radius:inherit}
+.btn-y:hover::before{transform:none}
+.btn-o{border:1.5px solid rgba(255,255,255,.3);color:#fff}
+.btn-o:hover{border-color:#fff}
+/* preloader */
+#pre{position:fixed;inset:0;z-index:100;background:var(--bg);display:grid;place-items:center}
+#pre .nm{font-family:Anton,sans-serif;font-size:clamp(44px,9vw,120px);display:flex;gap:.25em;overflow:hidden}
+#pre .nm span{display:inline-block;transform:translateY(110%)}
+#pre .bar{position:absolute;left:0;bottom:0;height:4px;background:var(--y);width:0}
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s}
+nav.solid{background:rgba(11,12,10,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:Anton,sans-serif;font-size:22px;letter-spacing:.06em;text-decoration:none}
+nav .links{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:600}
+nav .links a{text-decoration:none;opacity:.8}nav .links a:hover{opacity:1}
+@media(max-width:820px){nav .links a:not(.btn){display:none}}
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding:110px 20px 60px}
+.hero .txt{position:relative;z-index:2}
+.hero h1{font-size:clamp(58px,8.6vw,132px);margin:16px 0 22px}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.04em}
+.hero h1 .ch{display:inline-block;will-change:transform}
+.hero .lead{font-size:clamp(17px,1.6vw,20px);color:#dcdacf;max-width:520px;margin-bottom:30px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.vid-card{position:relative;height:min(78svh,720px);border-radius:32px;overflow:hidden;border:1px solid var(--line);clip-path:inset(0 0 0 0 round 32px);background:var(--card)}
+.vid-card video{width:100%;height:100%;object-fit:cover}
+.vid-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(11,12,10,.75))}
+.vid-card .lbl{position:absolute;left:20px;bottom:18px;z-index:2;font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px}
+.vid-card .lbl i{width:8px;height:8px;border-radius:50%;background:var(--y);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(245,197,24,.7)}70%{box-shadow:0 0 0 12px rgba(245,197,24,0)}100%{box-shadow:0 0 0 0 rgba(245,197,24,0)}}
+.float{position:absolute;z-index:3;font-size:13px;font-weight:700;padding:10px 16px;border-radius:999px;background:rgba(20,22,18,.82);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.14);white-space:nowrap}
+.float b{color:var(--y);margin-right:6px}
+.f1{top:12%;left:-34px}.f2{top:46%;right:-22px}.f3{bottom:14%;left:-26px}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:auto;padding-top:96px}
+  .vid-card{height:68svh}.f1{left:12px}.f2{right:12px}.f3{left:12px}
+}
+/* marquesinas */
+.mq{background:var(--y);color:#111;padding:20px 0;overflow:hidden;transform:rotate(-2deg) scale(1.04);margin:40px 0 0}
+.mq.b{background:var(--bg);color:var(--txt);transform:rotate(1.5deg) scale(1.04);margin-top:-6px;border-block:1px solid var(--line)}
+.mq .tr{display:flex;width:max-content;gap:40px;font-family:Anton,sans-serif;font-size:clamp(32px,5vw,58px);text-transform:uppercase;white-space:nowrap}
+.mq.b .tr{color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.4)}
+/* secciones */
+section{padding:110px 0;position:relative}
+.sec-title{font-size:clamp(44px,6.4vw,84px);margin:14px 0 20px}
+.sub{color:var(--mut);font-size:18px;max-width:620px}
+.big-quote{font-family:Anton,sans-serif;text-transform:uppercase;font-size:clamp(40px,6.6vw,92px);line-height:1.02}
+.prob{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:60px}
+.prob>div{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px;transition:border-color .3s}
+.prob>div:hover{border-color:var(--oliva)}
+.prob .n{font-family:Anton,sans-serif;font-size:58px;color:var(--y);line-height:1;margin-bottom:12px}
+.prob h3{font-size:21px;margin-bottom:8px}.prob p{color:var(--mut);font-size:15px}
+@media(max-width:860px){.prob{grid-template-columns:1fr}}
+/* entrenamientos: scroll horizontal */
+.hz{height:100svh;overflow:hidden;display:flex;align-items:center}
+.hz-track{display:flex;gap:28px;padding:0 6vw;will-change:transform}
+.hz-intro{flex:0 0 min(460px,80vw);display:flex;flex-direction:column;justify-content:center}
+.panel{position:relative;flex:0 0 min(560px,82vw);height:min(72svh,640px);border-radius:32px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(160deg,#2c3120,#141611)}
+.panel .media{position:absolute;inset:0;overflow:hidden}
+.panel .media img,.panel .media video{width:116%;max-width:none;height:100%;object-fit:cover}
+.panel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,12,10,.05) 25%,rgba(11,12,10,.94) 78%)}
+.panel .body{position:absolute;left:30px;right:30px;bottom:30px;z-index:2}
+.panel .tag{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:var(--y);color:#111;padding:6px 12px;border-radius:999px;margin-bottom:14px}
+.panel h3{font-family:Anton,sans-serif;font-size:clamp(40px,4.6vw,62px);text-transform:uppercase;line-height:.95;margin-bottom:10px}
+.panel p{color:#d8d6cb;font-size:15px;max-width:440px}
+.panel ul{list-style:none;margin-top:14px;font-size:14px;color:#ecebe2;display:flex;flex-wrap:wrap;gap:8px}
+.panel li{padding:6px 12px;border:1px solid rgba(255,255,255,.18);border-radius:999px}
+@media(max-width:820px){.hz{height:auto;display:block;padding:90px 0}.hz-track{flex-direction:column;padding:0 20px}.hz-intro,.panel{flex:none;width:100%}.panel{height:520px}.panel .media img,.panel .media video{width:100%}}
+.plink{display:inline-block;margin-top:16px;font-weight:800;font-size:14px;color:var(--y);text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:2px;transition:letter-spacing .3s}
+.plink:hover{letter-spacing:.04em}
+/* galería */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:50px}
+.gal .col{display:flex;flex-direction:column;gap:14px}
+.gal figure{border-radius:20px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
+.gal img,.gal video{width:100%;object-fit:cover;aspect-ratio:4/5;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.gal figure:hover img,.gal figure:hover video{transform:scale(1.06)}
+@media(max-width:820px){.gal{grid-template-columns:repeat(2,1fr)}}
+/* método */
+.met{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.met-img{border-radius:32px;overflow:hidden;height:640px;border:1px solid var(--line);background:linear-gradient(160deg,#3a3f28,#141611);clip-path:inset(12% 12% 12% 12% round 32px)}
+.met-img img,.met-img video{width:100%;height:100%;object-fit:cover;object-position:center 20%;transform:scale(1.25)}
+.pilar{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.pilar b{font-family:Anton,sans-serif;font-size:30px;color:var(--y);min-width:48px}
+.pilar h4{font-size:19px;margin-bottom:4px}.pilar p{color:var(--mut);font-size:15px}
+@media(max-width:900px){.met{grid-template-columns:1fr}.met-img{height:480px}}
+/* pasos */
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
+.paso{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:32px;overflow:hidden;position:relative}
+.paso .num{font-family:Anton,sans-serif;font-size:96px;line-height:.85;color:transparent;-webkit-text-stroke:1.5px var(--caqui);margin-bottom:18px}
+.paso h3{font-size:21px;margin-bottom:8px}.paso p{color:var(--mut);font-size:15px}
+.paso::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--y);transform:scaleX(0);transform-origin:left;transition:transform .6s}
+.paso:hover::after{transform:none}
+@media(max-width:860px){.pasos{grid-template-columns:1fr}}
+/* final */
+.final{text-align:center;overflow:hidden}
+.final h2{font-size:clamp(40px,11vw,170px);line-height:.9;overflow-wrap:anywhere}
+.final h2 .fill{background:linear-gradient(90deg,var(--y) 50%,rgba(255,255,255,.14) 50%);background-size:200% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent}
+.final p{color:var(--mut);font-size:18px;margin:22px auto 34px;max-width:560px}
+footer{padding:36px 0;border-top:1px solid var(--line);color:var(--mut);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+/* cursor */
+#cur{position:fixed;left:0;top:0;width:12px;height:12px;border-radius:50%;background:var(--y);pointer-events:none;z-index:200;mix-blend-mode:difference;transform:translate(-50%,-50%);transition:width .25s,height .25s;opacity:0}
+#cur.on{opacity:1}#cur.big{width:64px;height:64px}
+@media(hover:none){#cur{display:none}}
+@media(prefers-reduced-motion:reduce){#pre{display:none}.final h2 .fill{background-position:0 0}.met-img{clip-path:none}}
+</style>
+</head>
+<body>
+
+<div id="pre"><div class="nm"><span>PAUL</span><span class="y">FOFANAH</span></div><div class="bar"></div></div>
+<div id="cur"></div>
+
+<nav id="nav"><div class="wrap">
+  <a class="logo" href="#top">PAUL <span class="y">FOFANAH</span></a>
+  <div class="links">
+    <a href="#entrenamientos">Entrenamientos</a>
+    <a href="#metodo">Método</a>
+    <a href="#empezar">Cómo empezar</a>
+    <a class="btn btn-y mag" style="padding:11px 20px;font-size:13px;" href="https://calendly.com/pfofana22/entrevista-pf" target="_blank" rel="noopener"><span>Reserva tu sesión</span></a>
+  </div>
+</div></nav>
+
+<header id="top" class="wrap hero">
+  <div class="txt">
+    <div class="eyebrow h-in">Entrenador personal · Tenerife y online</div>
+    <h1 class="display"><span class="ln split">Fuerza y</span><span class="ln split">salud para</span><span class="ln split y">vidas</span><span class="ln split y">ocupadas</span></h1>
+    <p class="lead h-in">Entrena sin obsesionarte ni vivir para el gym. Sesiones que caben en tu semana, un plan hecho para ti y la constancia que hasta ahora te faltaba.</p>
+    <div class="ctas h-in">
+      <a class="btn btn-y mag" href="https://calendly.com/pfofana22/entrevista-pf" target="_blank" rel="noopener"><span>Reserva tu primera sesión →</span></a>
+      <a class="btn btn-o mag" href="#entrenamientos"><span>Ver entrenamientos</span></a>
+    </div>
+  </div>
+  <div style="position:relative">
+    <div class="vid-card" id="heroCard">
+      <video src="media/hero.mp4" poster="media/hero.jpg" autoplay muted loop playsinline preload="auto"></video>
+      <div class="lbl"><i></i>Entrena conmigo · Tenerife</div>
+    </div>
+    <div class="float f1"><b>●</b>Presencial en Tenerife</div>
+    <div class="float f2"><b>●</b>Online</div>
+    <div class="float f3"><b>●</b>Grupos al aire libre</div>
+  </div>
+</header>
+
+<div class="mq"><div class="tr" data-dir="-1"><span>Más energía</span><span>★</span><span>Más fuerza</span><span>★</span><span>Sin obsesionarte</span><span>★</span><span>Hábitos que duran</span><span>★</span><span>Más energía</span><span>★</span><span>Más fuerza</span><span>★</span><span>Sin obsesionarte</span><span>★</span><span>Hábitos que duran</span><span>★</span></div></div>
+<div class="mq b"><div class="tr" data-dir="1"><span>Entrena conmigo</span><span>✦</span><span>Tenerife</span><span>✦</span><span>Online</span><span>✦</span><span>Presencial</span><span>✦</span><span>Entrena conmigo</span><span>✦</span><span>Tenerife</span><span>✦</span><span>Online</span><span>✦</span><span>Presencial</span><span>✦</span></div></div>
+
+<section id="problema">
+  <div class="wrap">
+    <div class="eyebrow">¿Te suena?</div>
+    <p class="big-quote" style="margin-top:18px">No te falta motivación. Te falta <span class="y">un plan</span> que encaje en tu vida.</p>
+    <div class="prob">
+      <div class="tilt"><div class="n">30'</div><h3>Poco tiempo</h3><p>No necesitas dos horas al día. Con sesiones cortas y bien planteadas se nota en fuerza y en energía.</p></div>
+      <div class="tilt"><div class="n">↺</div><h3>Empiezas y lo dejas</h3><p>El problema no eres tú, es el método. Construimos hábitos que se mantienen, paso a paso.</p></div>
+      <div class="tilt"><div class="n">⚡</div><h3>Vas sin energía</h3><p>Entrenar bien te da más energía para el resto del día, no te la quita.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="entrenamientos" class="hz" style="padding:0">
+  <div class="hz-track">
+    <div class="hz-intro">
+      <div class="eyebrow">Entrenamientos</div>
+      <h2 class="display sec-title">Entrena como mejor te venga</h2>
+      <p class="sub">En persona, desde casa o en grupo en la playa. El objetivo es el mismo: que entrenar forme parte de tu vida sin complicártela.</p>
+    </div>
+    <article class="panel"><div class="media" data-media="presencial"></div>
+      <div class="body"><span class="tag">Tenerife</span><h3>Presencial</h3><p>Sesiones conmigo, corrigiendo la técnica y ajustando cada entrenamiento a cómo llegas ese día.</p><ul><li>Fuerza</li><li>Funcional</li><li>Plan a tu nivel</li></ul><a class="plink" href="https://forms.gle/PvjzshefdE8UgNEA7" target="_blank" rel="noopener">Entrenemos juntos →</a></div></article>
+    <article class="panel"><div class="media" data-media="online"></div>
+      <div class="body"><span class="tag">Desde donde estés</span><h3>Online</h3><p>Tu plan en el móvil, con vídeos y seguimiento para entrenar en casa, en el gym o de viaje.</p><ul><li>Rutinas cortas</li><li>Seguimiento</li><li>Ajustes del plan</li></ul><a class="plink" href="https://forms.gle/PvjzshefdE8UgNEA7" target="_blank" rel="noopener">Entrenemos juntos →</a></div></article>
+    <article class="panel"><div class="media" data-media="grupo"></div>
+      <div class="body"><span class="tag">Al aire libre</span><h3>En grupo</h3><p>Entrenamiento funcional en grupo en la playa de Las Teresitas: energía, buen ambiente y constancia.</p><ul><li>Todos los niveles</li><li>Comunidad</li><li>Las Teresitas</li></ul><a class="plink" href="https://forms.gle/PvjzshefdE8UgNEA7" target="_blank" rel="noopener">Entrenemos juntos →</a></div></article>
+  </div>
+</section>
+
+
+<section id="metodo" style="background:var(--bg2);border-block:1px solid var(--line)">
+  <div class="wrap met">
+    <div class="met-img" id="metImg" data-media="paul"></div>
+    <div>
+      <div class="eyebrow">El método</div>
+      <h2 class="display sec-title">Entrenar sin vivir para el gym</h2>
+      <p class="sub">Soy Paul Fofanah, entrenador personal en Tenerife. Ayudo a personas con vidas ocupadas a ganar fuerza y salud con un sistema sencillo que se puede mantener en el tiempo.</p>
+      <div style="margin-top:26px">
+        <div class="pilar"><b>01</b><div><h4>Fuerza como base</h4><p>Lo que más te va a cambiar el cuerpo y el día a día.</p></div></div>
+        <div class="pilar"><b>02</b><div><h4>Hábitos realistas</h4><p>Pequeños cambios que sí cumples, en lugar de planes perfectos que abandonas.</p></div></div>
+        <div class="pilar"><b>03</b><div><h4>Sin extremos</h4><p>Ni dietas imposibles ni culpa. Entrenar tiene que sumar a tu vida.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="empezar">
+  <div class="wrap">
+    <div class="eyebrow">Cómo empezar</div>
+    <h2 class="display sec-title">Tres pasos y empezamos</h2>
+    <div class="pasos">
+      <div class="paso"><div class="num">01</div><h3>Reserva tu primera sesión</h3><p>Elige día y hora en mi calendario. Nos conocemos y me cuentas tu punto de partida.</p><a class="plink" href="https://calendly.com/pfofana22/entrevista-pf" target="_blank" rel="noopener">Abrir calendario →</a></div>
+      <div class="paso"><div class="num">02</div><h3>Te preparo tu plan</h3><p>Según tus objetivos, tu nivel y el tiempo que de verdad tienes.</p><a class="plink" href="https://forms.gle/PvjzshefdE8UgNEA7" target="_blank" rel="noopener">Cuéntame tu objetivo →</a></div>
+      <div class="paso"><div class="num">03</div><h3>Entrenamos juntos</h3><p>Presencial, online o en grupo. Con seguimiento para que no lo dejes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div class="eyebrow">Entrena conmigo</div>
+    <h2 class="display" style="margin-top:16px"><span class="fill">Tu primera</span><br><span class="fill">sesión empieza</span><br><span class="fill">aquí</span></h2>
+    <p>Reserva una hora en mi calendario o cuéntame qué buscas y te respondo personalmente.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a class="btn btn-y mag" href="https://calendly.com/pfofana22/entrevista-pf" target="_blank" rel="noopener"><span>Reserva tu primera sesión →</span></a>
+      <a class="btn btn-o mag" href="https://forms.gle/PvjzshefdE8UgNEA7" target="_blank" rel="noopener"><span>Entrenemos juntos</span></a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <span>© 2026 Paul Fofanah · Entrenador personal en Tenerife</span>
+  <span><a href="https://www.instagram.com/mrfofanah/" target="_blank" rel="noopener">Instagram @mrfofanah</a> · Web por Airmate</span>
+</div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+/* ═══ MEDIOS (archivos en media/) ═══ */
+const MEDIA={
+  presencial:'media/presencial.mp4',
+  online:'media/online.mp4',
+  grupo:'media/grupo.jpg',
+  paul:'media/paul.jpg'
+};
+const GALERIA=[];
+
+function mediaEl(src,alt){
+  if(/\.mp4$/.test(src)) return `<video src="${src}" poster="${src.replace('.mp4','.jpg')}" muted loop playsinline autoplay preload="metadata"></video>`;
+  return `<img src="${src}" alt="${alt||'Entrenamiento con Paul Fofanah'}" loading="lazy">`;
+}
+document.querySelectorAll('[data-media]').forEach(el=>{const s=MEDIA[el.dataset.media];if(s)el.innerHTML=mediaEl(s);});
+(function(){
+  const sec=document.getElementById('galeria');
+  if(!sec||!GALERIA.length){sec?.remove();return;}
+  const g=document.getElementById('gal');const cols=[0,1,2,3].map(()=>{const c=document.createElement('div');c.className='col';g.appendChild(c);return c;});
+  GALERIA.forEach((f,i)=>{const fig=document.createElement('figure');fig.innerHTML=mediaEl('media/'+f);cols[i%4].appendChild(fig);});
+})();
+
+// los vídeos solo se reproducen cuando se ven (ahorra datos en el móvil)
+const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){if(v.preload!=='auto'){v.preload='auto';v.load();}v.play().catch(()=>{});}else v.pause();}),{rootMargin:'200px'});
+document.querySelectorAll('video').forEach(v=>{v.removeAttribute('autoplay');vio.observe(v);});
+
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>40),{passive:true});
+
+if(!window.gsap||RM){document.getElementById('pre')?.remove();}
+else{
+  gsap.registerPlugin(ScrollTrigger);
+  let lenis=null;
+  if(window.Lenis){lenis=new Lenis({lerp:.1});lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);
+    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();lenis.scrollTo(t,{offset:-60});}}));}
+
+  // titulares letra a letra
+  document.querySelectorAll('.split').forEach(el=>{el.innerHTML=el.textContent.split('').map(c=>c===' '?' ':`<span class="ch">${c}</span>`).join('');});
+
+  // preloader → portada
+  gsap.timeline()
+    .to('#pre .nm span',{y:0,duration:.8,stagger:.12,ease:'expo.out'})
+    .to('#pre .bar',{width:'100%',duration:.9,ease:'power2.inOut'},'<.1')
+    .to('#pre',{yPercent:-100,duration:.9,ease:'expo.inOut'},'+=.15')
+    .from('.hero h1 .ch',{yPercent:115,rotate:6,duration:1,stagger:.025,ease:'expo.out'},'-=.45')
+    .from('.h-in',{y:30,opacity:0,duration:.9,stagger:.1,ease:'expo.out'},'-=.8')
+    .from('#heroCard',{clipPath:'inset(40% 30% 40% 30% round 32px)',scale:1.08,duration:1.4,ease:'expo.inOut'},'-=1.2')
+    .from('.float',{y:30,opacity:0,scale:.8,duration:.7,stagger:.12,ease:'back.out(1.6)'},'-=.6')
+    .add(()=>{document.getElementById('pre').remove();
+      gsap.utils.toArray('.float').forEach((f,i)=>gsap.to(f,{y:i%2?-12:12,duration:2.2+i*.4,repeat:-1,yoyo:true,ease:'sine.inOut'}));});
+
+  // portada: parallax al bajar
+  gsap.to('#heroCard',{yPercent:12,scale:.94,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.to('.hero .txt',{yPercent:-18,opacity:.2,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+
+  // marquesinas que aceleran con el scroll
+  document.querySelectorAll('.mq .tr').forEach(tr=>{const dir=+tr.dataset.dir;const w=tr.scrollWidth/2;let x=dir<0?0:-w;let v=0;
+    gsap.ticker.add(()=>{x+=dir*(1.1+v);if(dir<0&&x<=-w)x+=w;if(dir>0&&x>=0)x-=w;gsap.set(tr,{x});v*=.92;});
+    ScrollTrigger.create({onUpdate:s=>{v=Math.min(Math.abs(s.getVelocity())/180,14);}});});
+
+  // frase que se ilumina palabra a palabra
+  const q=document.querySelector('.big-quote');
+  q.innerHTML=q.innerHTML.replace(/(<span class="y">[^<]*<\/span>|[^\s<]+)/g,m=>`<span class="w">${m}</span>`);
+  gsap.fromTo('.big-quote .w',{opacity:.14},{opacity:1,stagger:.1,ease:'none',scrollTrigger:{trigger:'.big-quote',start:'top 80%',end:'bottom 45%',scrub:true}});
+  gsap.from('.prob>div',{y:80,opacity:0,rotateX:-18,transformPerspective:800,duration:1,stagger:.12,ease:'expo.out',scrollTrigger:{trigger:'.prob',start:'top 85%'}});
+
+  // entrenamientos: scroll horizontal fijado (escritorio)
+  ScrollTrigger.matchMedia({
+    '(min-width: 821px)':()=>{
+      const track=document.querySelector('.hz-track');
+      const dist=()=>track.scrollWidth-innerWidth;
+      const st={trigger:'#entrenamientos',start:'top top',end:()=>'+='+dist(),scrub:1,invalidateOnRefresh:true};
+      gsap.to(track,{x:()=>-dist(),ease:'none',scrollTrigger:{...st,pin:true}});
+      gsap.utils.toArray('.panel .media').forEach(m=>gsap.fromTo(m.children,{xPercent:0},{xPercent:-12,ease:'none',scrollTrigger:{...st}}));
+    },
+    '(max-width: 820px)':()=>{gsap.utils.toArray('.panel').forEach(p=>gsap.from(p,{y:80,opacity:0,duration:1,ease:'expo.out',scrollTrigger:{trigger:p,start:'top 88%'}}));}
+  });
+
+  // galería con columnas a distinta velocidad
+  gsap.utils.toArray('#gal .col').forEach((c,i)=>gsap.fromTo(c,{y:i%2?120:0},{y:i%2?-60:60,ease:'none',scrollTrigger:{trigger:'#gal',start:'top bottom',end:'bottom top',scrub:true}}));
+
+  // método: la foto se abre
+  gsap.to('#metImg',{clipPath:'inset(0% 0% 0% 0% round 32px)',ease:'none',scrollTrigger:{trigger:'#metImg',start:'top 85%',end:'top 30%',scrub:true}});
+  gsap.to('#metImg > *',{scale:1,ease:'none',scrollTrigger:{trigger:'#metImg',start:'top bottom',end:'bottom top',scrub:true}});
+  gsap.from('.pilar',{x:60,opacity:0,duration:.9,stagger:.12,ease:'expo.out',scrollTrigger:{trigger:'.pilar',start:'top 85%'}});
+  gsap.from('.paso',{y:90,opacity:0,duration:1,stagger:.14,ease:'expo.out',scrollTrigger:{trigger:'.pasos',start:'top 85%'}});
+  gsap.utils.toArray('.sec-title').forEach(t=>gsap.from(t,{y:70,opacity:0,duration:1,ease:'expo.out',scrollTrigger:{trigger:t,start:'top 88%'}}));
+  // final: el texto se rellena de amarillo
+  gsap.to('.final h2 .fill',{backgroundPosition:'0% 0',stagger:.25,ease:'none',scrollTrigger:{trigger:'.final h2',start:'top 80%',end:'bottom 50%',scrub:true}});
+
+  // botones magnéticos, tarjetas con inclinación y cursor
+  if(matchMedia('(hover:hover)').matches){
+    document.querySelectorAll('.mag').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();gsap.to(b,{x:(e.clientX-r.left-r.width/2)*.25,y:(e.clientY-r.top-r.height/2)*.35,duration:.4,ease:'power3.out'});});b.addEventListener('mouseleave',()=>gsap.to(b,{x:0,y:0,duration:.6,ease:'elastic.out(1,.4)'}));});
+    document.querySelectorAll('.tilt').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();gsap.to(c,{rotateY:((e.clientX-r.left)/r.width-.5)*10,rotateX:-((e.clientY-r.top)/r.height-.5)*10,transformPerspective:800,duration:.4});});c.addEventListener('mouseleave',()=>gsap.to(c,{rotateX:0,rotateY:0,duration:.6}));});
+    const cur=document.getElementById('cur');addEventListener('mousemove',e=>{cur.classList.add('on');gsap.to(cur,{x:e.clientX,y:e.clientY,duration:.15});});
+    document.querySelectorAll('a,.panel').forEach(el=>{el.addEventListener('mouseenter',()=>cur.classList.add('big'));el.addEventListener('mouseleave',()=>cur.classList.remove('big'));});
+  }
+  addEventListener('load',()=>ScrollTrigger.refresh());
+}
+</script>
+</body>
+</html>
