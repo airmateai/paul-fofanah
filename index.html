@@ -7,7 +7,7 @@
 <meta name="description" content="Fuerza y salud para personas con vidas ocupadas. Entrenamiento personal en Tenerife, presencial, online y en grupo en Las Teresitas.">
 <meta property="og:title" content="Paul Fofanah · Entrenador personal en Tenerife">
 <meta property="og:description" content="Entrena con flow. Fuerza y salud para vidas ocupadas. Entrena sin obsesionarte ni vivir para el gym.">
-<meta property="og:image" content="media/paul.jpg">
+<meta property="og:image" content="media/f-paul.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -52,7 +52,9 @@ nav .links a{text-decoration:none;opacity:.8}nav .links a:hover{opacity:1}
 .hero .lead{font-size:clamp(17px,1.6vw,20px);color:#dcdacf;max-width:520px;margin-bottom:30px}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
 .vid-card{position:relative;height:min(78svh,720px);border-radius:32px;overflow:hidden;border:1px solid var(--line);clip-path:inset(0 0 0 0 round 32px);background:var(--card)}
-.vid-card video{width:100%;height:100%;object-fit:cover}
+.vid-card video,.vid-card img{width:100%;height:100%;object-fit:cover}
+.vid-card img{object-position:center 18%;animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.14) translateY(-2%)}}
 .vid-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(11,12,10,.75))}
 .vid-card .lbl{position:absolute;left:20px;bottom:18px;z-index:2;font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px}
 .vid-card .lbl i{width:8px;height:8px;border-radius:50%;background:var(--y);animation:pulse 1.8s infinite}
@@ -107,7 +109,7 @@ section{padding:110px 0;position:relative}
 /* método */
 .met{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .met-img{border-radius:32px;overflow:hidden;height:640px;border:1px solid var(--line);background:linear-gradient(160deg,#3a3f28,#141611);clip-path:inset(12% 12% 12% 12% round 32px)}
-.met-img img,.met-img video{width:100%;height:100%;object-fit:cover;object-position:center 20%;transform:scale(1.25)}
+.met-img img,.met-img video{width:100%;height:100%;object-fit:cover;object-position:38% 25%;transform:scale(1.25)}
 .pilar{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
 .pilar b{font-family:Anton,sans-serif;font-size:30px;color:var(--y);min-width:48px}
 .pilar h4{font-size:19px;margin-bottom:4px}.pilar p{color:var(--mut);font-size:15px}
@@ -120,8 +122,17 @@ section{padding:110px 0;position:relative}
 .paso::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--y);transform:scaleX(0);transform-origin:left;transition:transform .6s}
 .paso:hover::after{transform:none}
 @media(max-width:860px){.pasos{grid-template-columns:1fr}}
+/* banda de foto */
+.banda{position:relative;height:min(92svh,820px);overflow:hidden;padding:0;display:flex;align-items:flex-end}
+.banda .bg{position:absolute;inset:-12% 0;background:url(media/f-clase.jpg) center 35%/cover}
+.banda::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,12,10,.15) 30%,rgba(11,12,10,.92))}
+.banda .wrap{position:relative;z-index:2;padding-bottom:70px;width:100%}
+.banda h2{font-size:clamp(52px,9vw,140px);margin-top:12px}
 /* final */
 .final{text-align:center;overflow:hidden}
+.final .bg{position:absolute;inset:-15% 0;background:url(media/f-final.jpg) center/cover;opacity:.32;z-index:0}
+.final::before{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse at center,rgba(11,12,10,.35),rgba(11,12,10,.95) 75%)}
+.final .wrap{position:relative;z-index:2}
 .final h2{font-size:clamp(40px,11vw,170px);line-height:.9;overflow-wrap:anywhere}
 .final h2 .fill{background:linear-gradient(90deg,var(--y) 50%,rgba(255,255,255,.14) 50%);background-size:200% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent}
 .final p{color:var(--mut);font-size:18px;margin:22px auto 34px;max-width:560px}
@@ -162,7 +173,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   </div>
   <div style="position:relative">
     <div class="vid-card" id="heroCard">
-      <video src="media/hero.mp4" poster="media/hero.jpg" autoplay muted loop playsinline preload="auto"></video>
+      <img src="media/f-hero.jpg" alt="Paul Fofanah con los brazos en alto dando una clase funcional" fetchpriority="high">
       <div class="lbl"><i></i>Entrena con flow · Tenerife</div>
     </div>
     <div class="float f1"><b>●</b>Presencial en Tenerife</div>
@@ -219,6 +230,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   </div>
 </section>
 
+<section class="banda" aria-label="Clases en grupo">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div class="eyebrow">Clases en grupo</div>
+    <h2 class="display">Energía que<br><span class="y">se contagia.</span></h2>
+  </div>
+</section>
+
 <section id="empezar">
   <div class="wrap">
     <div class="eyebrow">Cómo empezar</div>
@@ -232,6 +251,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 </section>
 
 <section class="final">
+  <div class="bg"></div>
   <div class="wrap">
     <div class="eyebrow">Entrena conmigo</div>
     <h2 class="display" style="margin-top:16px"><span class="fill">Tu primera</span><br><span class="fill">sesión empieza</span><br><span class="fill">aquí</span></h2>
@@ -245,7 +265,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 <footer><div class="wrap">
   <span>© 2026 Paul Fofanah · Entrenador personal en Tenerife</span>
-  <span><a href="https://www.instagram.com/mrfofanah/" target="_blank" rel="noopener">Instagram @mrfofanah</a> · Web por Airmate</span>
+  <span><a href="https://www.instagram.com/mrfofanah/" target="_blank" rel="noopener">Instagram @mrfofanah</a> · Fotos: Tony Cuadrado · Web por Airmate</span>
 </div></footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -254,10 +274,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <script>
 /* ═══ MEDIOS (archivos en media/) ═══ */
 const MEDIA={
-  presencial:'media/presencial.mp4',
+  presencial:'media/f-presencial.jpg',
   online:'media/online.mp4',
-  grupo:'media/grupo.jpg',
-  paul:'media/paul.jpg'
+  grupo:'media/f-grupo.jpg',
+  paul:'media/f-paul.jpg'
 };
 const GALERIA=[];
 
@@ -311,6 +331,11 @@ else{
   document.querySelectorAll('.mq .tr').forEach(tr=>{const dir=+tr.dataset.dir;const w=tr.scrollWidth/2;let x=dir<0?0:-w;let v=0;
     gsap.ticker.add(()=>{x+=dir*(1.1+v);if(dir<0&&x<=-w)x+=w;if(dir>0&&x>=0)x-=w;gsap.set(tr,{x});v*=.92;});
     ScrollTrigger.create({onUpdate:s=>{v=Math.min(Math.abs(s.getVelocity())/180,14);}});});
+
+  // fotos de fondo con parallax
+  gsap.fromTo('.banda .bg',{yPercent:-8},{yPercent:8,ease:'none',scrollTrigger:{trigger:'.banda',start:'top bottom',end:'bottom top',scrub:true}});
+  gsap.from('.banda h2, .banda .eyebrow',{y:60,opacity:0,duration:1.1,stagger:.12,ease:'expo.out',scrollTrigger:{trigger:'.banda',start:'top 60%'}});
+  gsap.fromTo('.final .bg',{yPercent:-6,scale:1.1},{yPercent:6,scale:1,ease:'none',scrollTrigger:{trigger:'.final',start:'top bottom',end:'bottom top',scrub:true}});
 
   // frase que se ilumina palabra a palabra
   const q=document.querySelector('.big-quote');
