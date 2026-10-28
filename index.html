@@ -7,7 +7,7 @@
 <meta name="description" content="Fuerza y salud para personas con vidas ocupadas. Entrenamiento personal en Tenerife, presencial, online y en grupo en Las Teresitas.">
 <meta property="og:title" content="Paul Fofanah · Entrenador personal en Tenerife">
 <meta property="og:description" content="Entrena con flow. Fuerza y salud para vidas ocupadas. Entrena sin obsesionarte ni vivir para el gym.">
-<meta property="og:image" content="media/f-paul.jpg">
+<meta property="og:image" content="media/f-hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -59,9 +59,23 @@ nav .links a{text-decoration:none;opacity:.8}nav .links a:hover{opacity:1}
 .vid-card .lbl{position:absolute;left:20px;bottom:18px;z-index:2;font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px}
 .vid-card .lbl i{width:8px;height:8px;border-radius:50%;background:var(--y);animation:pulse 1.8s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(245,197,24,.7)}70%{box-shadow:0 0 0 12px rgba(245,197,24,0)}100%{box-shadow:0 0 0 0 rgba(245,197,24,0)}}
-.float{position:absolute;z-index:3;font-size:13px;font-weight:700;padding:10px 16px;border-radius:999px;background:rgba(20,22,18,.82);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.14);white-space:nowrap}
-.float b{color:var(--y);margin-right:6px}
-.f1{top:12%;left:-34px}.f2{top:46%;right:-22px}.f3{bottom:14%;left:-26px}
+.float{position:absolute;z-index:3;display:flex;align-items:center;gap:12px;padding:10px 18px 10px 10px;border-radius:18px;background:linear-gradient(135deg,rgba(32,35,28,.72),rgba(14,15,12,.6));backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);border:1px solid rgba(255,255,255,.12);box-shadow:0 18px 40px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.08);white-space:nowrap}
+.float .ic{width:40px;height:40px;border-radius:12px;background:var(--y);color:#111;display:grid;place-items:center;flex:0 0 auto}
+.float .ic svg{width:21px;height:21px}
+.float strong{display:block;font-family:Anton,sans-serif;font-weight:400;font-size:19px;letter-spacing:.03em;text-transform:uppercase;line-height:1}
+.float small{display:block;font-size:12px;color:var(--mut);margin-top:3px;font-weight:600}
+.sello{position:absolute;z-index:4;right:-34px;bottom:-34px;width:132px;height:132px;border-radius:50%;background:var(--y);color:#111;display:grid;place-items:center;text-decoration:none;box-shadow:0 18px 40px rgba(0,0,0,.5);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.sello{animation:sello-in 1s 3.2s cubic-bezier(.3,1.6,.5,1) both}
+.sello:hover .fl{transform:rotate(-45deg) scale(1.1)}
+@keyframes sello-in{from{transform:scale(0) rotate(-120deg)}to{transform:none}}
+@media(prefers-reduced-motion:reduce){.sello{animation:none}}
+.sello svg.anillo{position:absolute;inset:0;width:100%;height:100%;animation:girar 14s linear infinite}
+.sello text{font-family:Anton,sans-serif;font-size:13.2px;letter-spacing:.19em;fill:#111}
+.sello .fl{width:38px;height:38px;transition:transform .4s}
+.sello:hover .fl{transform:rotate(-45deg)}
+@keyframes girar{to{transform:rotate(360deg)}}
+@media(max-width:900px){.sello{right:10px;bottom:-30px;width:112px;height:112px}.float strong{font-size:16px}.float .ic{width:34px;height:34px}}
+.f1{top:10%;left:-46px}.f2{top:44%;right:-30px}.f3{bottom:16%;left:-36px}
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;min-height:auto;padding-top:96px}
   .vid-card{height:68svh}.f1{left:12px}.f2{right:12px}.f3{left:12px}
@@ -109,7 +123,7 @@ section{padding:110px 0;position:relative}
 /* método */
 .met{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .met-img{border-radius:32px;overflow:hidden;height:640px;border:1px solid var(--line);background:linear-gradient(160deg,#3a3f28,#141611);clip-path:inset(12% 12% 12% 12% round 32px)}
-.met-img img,.met-img video{width:100%;height:100%;object-fit:cover;object-position:38% 25%;transform:scale(1.25)}
+.met-img img,.met-img video{width:100%;height:100%;object-fit:cover;object-position:50% 60%;transform:scale(1.25)}
 .pilar{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
 .pilar b{font-family:Anton,sans-serif;font-size:30px;color:var(--y);min-width:48px}
 .pilar h4{font-size:19px;margin-bottom:4px}.pilar p{color:var(--mut);font-size:15px}
@@ -174,11 +188,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <div style="position:relative">
     <div class="vid-card" id="heroCard">
       <img src="media/f-hero.jpg" alt="Paul Fofanah con los brazos en alto dando una clase funcional" fetchpriority="high">
-      <div class="lbl"><i></i>Entrena con flow · Tenerife</div>
     </div>
-    <div class="float f1"><b>●</b>Presencial en Tenerife</div>
-    <div class="float f2"><b>●</b>Online</div>
-    <div class="float f3"><b>●</b>Grupos al aire libre</div>
+    <div class="float f1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span><strong>Presencial</strong><small>En Tenerife</small></span></div>
+    <div class="float f2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18h2"/></svg></span><span><strong>Online</strong><small>Desde donde estés</small></span></div>
+    <div class="float f3"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3.5 20c.6-3.4 2.8-5.5 5.5-5.5s4.9 2.1 5.5 5.5M15 14.6c2.6-.3 4.8 1.4 5.5 5.4"/></svg></span><span><strong>En grupo</strong><small>Al aire libre</small></span></div>
+    <a class="sello" href="https://calendly.com/pfofana22/entrevista-pf" target="_blank" rel="noopener" aria-label="Reserva tu primera sesión">
+      <svg class="anillo" viewBox="0 0 132 132" aria-hidden="true"><defs><path id="circ" d="M66,66 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/></defs><text><textPath href="#circ">ENTRENA CON FLOW · RESERVA TU SESIÓN ·</textPath></text></svg>
+      <svg class="fl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
   </div>
 </header>
 
@@ -319,7 +336,7 @@ else{
     .from('.hero h1 .ch',{yPercent:115,rotate:6,duration:1,stagger:.025,ease:'expo.out'},'-=.45')
     .from('.h-in',{y:30,opacity:0,duration:.9,stagger:.1,ease:'expo.out'},'-=.8')
     .from('#heroCard',{clipPath:'inset(40% 30% 40% 30% round 32px)',scale:1.08,duration:1.4,ease:'expo.inOut'},'-=1.2')
-    .from('.float',{y:30,opacity:0,scale:.8,duration:.7,stagger:.12,ease:'back.out(1.6)'},'-=.6')
+    .from('.float',{x:i=>i===1?60:-60,opacity:0,scale:.85,duration:.9,stagger:.14,ease:'back.out(1.5)'},'-=.6')
     .add(()=>{document.getElementById('pre').remove();
       gsap.utils.toArray('.float').forEach((f,i)=>gsap.to(f,{y:i%2?-12:12,duration:2.2+i*.4,repeat:-1,yoyo:true,ease:'sine.inOut'}));});
 
