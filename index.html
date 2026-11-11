@@ -179,6 +179,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .ev-vid{position:relative;max-width:360px;margin-left:auto;border-radius:22px;overflow:hidden;border:1px solid var(--line);aspect-ratio:9/16;background:var(--card)}
 .ev-vid video{width:100%;height:100%;object-fit:cover}
 .ev-vid .tag{position:absolute;left:14px;top:14px;background:var(--y);color:#111;font-family:Anton,sans-serif;font-size:15px;letter-spacing:.06em;padding:6px 10px 4px;text-transform:uppercase}
+.ev-son{position:absolute;right:14px;bottom:14px;display:flex;align-items:center;gap:8px;background:rgba(11,12,10,.82);color:var(--txt);border:1px solid rgba(255,255,255,.25);border-radius:10px;padding:10px 14px;font:700 13px Inter,sans-serif;letter-spacing:.04em;cursor:pointer;transition:border-color .3s,background .3s}
+.ev-son:hover{border-color:var(--y)}
+.ev-son svg{width:18px;height:18px}
+.ev-son.on{background:var(--y);color:#111;border-color:var(--y)}
 @media(max-width:900px){.ev{grid-template-columns:1fr;gap:44px}.ev-vid{margin:0 auto}}
 </style>
 </head>
@@ -248,6 +252,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <div class="ev-vid">
       <video src="media/clase-21nov.mp4" poster="media/clase-21nov.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Vídeo de la clase en grupo"></video>
       <div class="tag">21 nov</div>
+      <button class="ev-son" type="button" aria-label="Activar sonido"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path class="x" d="m16 9 5 6M21 9l-5 6"/><path class="w" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" style="display:none"/></svg><span>Activar sonido</span></button>
     </div>
   </div>
 </section>
@@ -446,5 +451,8 @@ else{
 </script>
 <script>/* el aviso del evento desaparece solo cuando pasa la clase */
 (function(){if(Date.now()>new Date('2026-11-21T14:00:00Z').getTime()){document.querySelectorAll('#clase21,.ev-link').forEach(function(e){e.remove()})}})();</script>
+<script>/* sonido del vídeo del evento */
+(function(){var b=document.querySelector('.ev-son');if(!b)return;var v=document.querySelector('.ev-vid video');
+b.addEventListener('click',function(){var on=v.muted;v.muted=!on;if(on){v.currentTime=0;v.play();}b.classList.toggle('on',on);b.querySelector('span').textContent=on?'Silenciar':'Activar sonido';b.setAttribute('aria-label',on?'Silenciar':'Activar sonido');b.querySelector('.x').style.display=on?'none':'';b.querySelector('.w').style.display=on?'':'none';});})();</script>
 </body>
 </html>
