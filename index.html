@@ -157,6 +157,29 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 #cur.on{opacity:1}#cur.big{width:64px;height:64px}
 @media(hover:none){#cur{display:none}}
 @media(prefers-reduced-motion:reduce){#pre{display:none}.final h2 .fill{background-position:0 0}.met-img{clip-path:none}}
+/* evento 21-nov */
+.aviso{display:inline-flex;align-items:center;gap:12px;margin-bottom:22px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--txt);border-bottom:1px solid var(--line);padding-bottom:8px;transition:border-color .3s}
+.aviso:hover{border-color:var(--y)}
+.aviso i{width:8px;height:8px;background:var(--y);display:inline-block;animation:lat 1.6s ease-in-out infinite}
+.aviso b{color:var(--y);font-weight:800}
+@keyframes lat{50%{opacity:.25}}
+#clase21{border-block:1px solid var(--line)}
+.ev{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+.ev-fecha{display:flex;align-items:flex-end;gap:20px;margin:22px 0 26px}
+.ev-fecha .d{font-family:Anton,sans-serif;font-size:clamp(120px,15vw,210px);line-height:.8;color:var(--y)}
+.ev-fecha .m{font-family:Anton,sans-serif;font-size:clamp(40px,4.6vw,64px);line-height:.9;text-transform:uppercase}
+.ev-fecha .m small{display:block;font-family:Inter,sans-serif;font-size:13px;font-weight:800;letter-spacing:.26em;color:var(--mut);margin-top:10px}
+.ev h2{font-size:clamp(40px,5.4vw,72px)}
+.ev-txt{color:var(--mut);font-size:18px;max-width:520px;margin:18px 0 30px}
+.ev-datos{list-style:none;margin-bottom:34px;max-width:520px}
+.ev-datos li{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-top:1px solid var(--line);font-size:16px}
+.ev-datos li:last-child{border-bottom:1px solid var(--line)}
+.ev-datos span{color:var(--mut);font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;padding-top:3px}
+.ev-datos strong{font-weight:700;text-align:right}
+.ev-vid{position:relative;max-width:360px;margin-left:auto;border-radius:22px;overflow:hidden;border:1px solid var(--line);aspect-ratio:9/16;background:var(--card)}
+.ev-vid video{width:100%;height:100%;object-fit:cover}
+.ev-vid .tag{position:absolute;left:14px;top:14px;background:var(--y);color:#111;font-family:Anton,sans-serif;font-size:15px;letter-spacing:.06em;padding:6px 10px 4px;text-transform:uppercase}
+@media(max-width:900px){.ev{grid-template-columns:1fr;gap:44px}.ev-vid{margin:0 auto}}
 </style>
 </head>
 <body>
@@ -167,6 +190,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <nav id="nav"><div class="wrap">
   <a class="logo" href="#top">PAUL <span class="y">FOFANAH</span></a>
   <div class="links">
+    <a href="#clase21" class="ev-link">Clase 21 nov</a>
     <a href="#entrenamientos">Entrenamientos</a>
     <a href="#metodo">Método</a>
     <a href="#empezar">Cómo empezar</a>
@@ -176,6 +200,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 <header id="top" class="wrap hero">
   <div class="txt">
+    <a class="aviso h-in ev-link" href="#clase21"><i></i>Nuevo · <b>Clase en grupo</b> · sáb 21 nov · 12:30 →</a>
     <div class="eyebrow h-in">Entrenador personal · Tenerife y online</div>
     <h1 class="display"><span class="ln split">Entrena</span><span class="ln split">con</span><span class="ln split y flow">flow.</span></h1>
     <p class="claim h-in">Fuerza y salud para <span class="y">vidas ocupadas.</span></p>
@@ -252,6 +277,31 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <div class="wrap">
     <div class="eyebrow">Clases en grupo</div>
     <h2 class="display">Energía que<br><span class="y">se contagia.</span></h2>
+  </div>
+</section>
+
+<section id="clase21" aria-label="Próxima clase en grupo">
+  <div class="wrap ev">
+    <div>
+      <div class="eyebrow">Próxima clase · Nuevo</div>
+      <div class="ev-fecha"><div class="d">21</div><div class="m">Nov<small>Sábado · 12:30</small></div></div>
+      <h2 class="display">El mejor rato <span class="y">de tu semana.</span></h2>
+      <p class="ev-txt">Entrenamiento dinámico en grupo, con buena música y mucho flow. Pierna, core y tren superior. Vengas como vengas, adapto cada ejercicio a ti.</p>
+      <ul class="ev-datos">
+        <li><span>Cuándo</span><strong>Sábado 21 de noviembre · 12:30</strong></li>
+        <li><span>Dónde</span><strong>Gimnasio Fight Club</strong></li>
+        <li><span>Nivel</span><strong>Todos los niveles</strong></li>
+        <li><span>Plazas</span><strong>Escríbeme y te guardo sitio</strong></li>
+      </ul>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-y mag" href="https://ig.me/m/mrfofanah" target="_blank" rel="noopener"><span>Escríbeme por Instagram →</span></a>
+        <a class="btn btn-o mag" href="https://www.instagram.com/mrfofanah/" target="_blank" rel="noopener"><span>Tráete a alguien</span></a>
+      </div>
+    </div>
+    <div class="ev-vid">
+      <video src="media/clase-21nov.mp4" poster="media/clase-21nov.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Vídeo de la clase en grupo"></video>
+      <div class="tag">21 nov</div>
+    </div>
   </div>
 </section>
 
@@ -394,5 +444,7 @@ else{
   addEventListener('load',()=>ScrollTrigger.refresh());
 }
 </script>
+<script>/* el aviso del evento desaparece solo cuando pasa la clase */
+(function(){if(Date.now()>new Date('2026-11-21T14:00:00Z').getTime()){document.querySelectorAll('#clase21,.ev-link').forEach(function(e){e.remove()})}})();</script>
 </body>
 </html>
